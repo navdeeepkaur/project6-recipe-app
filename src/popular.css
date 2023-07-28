@@ -1,0 +1,74 @@
+.popular{
+    padding: 10px;
+    width:100vw;
+    display: flex;
+    background-color: white;
+}
+
+.left, .right{
+    width:50%;
+    height: 500px;
+    margin: 20px;
+}
+
+.left{
+    animation: move 8s infinite;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes move{
+    0%{
+      background-image: url("https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-size: cover;
+    }
+    25%{
+      background-image: url("https://images.pexels.com/photos/295043/pexels-photo-295043.jpeg?auto=compress&cs=tinysrgb&w=600");
+      background-size: cover;
+    }
+    50%{
+      background-image: url("https://images.pexels.com/photos/17294717/pexels-photo-17294717/free-photo-of-food-on-a-wooden-table-during-a-special-occasion.jpeg?auto=compress&cs=tinysrgb&w=600");
+      background-size: cover;
+    }
+    75%{
+      background-image: url("https://images.pexels.com/photos/101533/pexels-photo-101533.jpeg?auto=compress&cs=tinysrgb&w=600");
+      background-size: cover;
+    }
+    100%{
+      background-image: url("https://images.pexels.com/photos/1552635/pexels-photo-1552635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+      background-size: cover;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .popular{
+        flex-direction: column;
+    }
+    .left, .right{
+        width: 90%;
+    }
+
+    .right{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .popular, .left{
+        padding: 0px;
+    }
+
+    .left{
+        height: 300px;
+    }
+
+    .right{
+        text-align: center;
+    }
+}
